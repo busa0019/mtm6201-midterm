@@ -93,13 +93,29 @@ nav .nav-links li a:hover {
     color: #fff;
     position: relative;
     margin: 0;
-    width: calc(100% + 2rem); /* Ensure hero section spans the full width */
+    width: calc(100% + 2rem);
     margin-left: -1rem; /* Offset the left margin */
     margin-right: -1rem; /* Offset the right margin */
     box-sizing: border-box; /* Include padding and border in element's total width and height */
 }
 
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5); 
+    z-index: 1;
+}
+/* Semi-transparent background for the menu and locations content */
+.hero hgroup, .hero button {
+    position: relative;
+    z-index: 2;
 
+    
+}
 /* Hero Section
 .hero {
     text-align: center;
@@ -233,14 +249,139 @@ nav .nav-links li a:hover {
 }
 
 
-
-
-
-/* Footer */
-footer {
-    background-color: #000;
+/* Menu and Locations Section */
+.menu-background {
+    width:calc(100%+2rem) ;
+    margin: 2rem 0; 
+    position: relative;
+    padding: 4rem 1rem; 
+    background: url('../images/coffee-shop.jpeg') no-repeat center center/cover;
     color: #fff;
     text-align: center;
-    padding: 1rem 0;
-    border-top: 1px solid #fff; /* Add a top border for footer */
+     margin-left: -1.7rem; 
+    margin-right: -1.7rem;  
+    margin-bottom: 80px;
+     
 }
+.menu-background::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5); /* Semi-transparent overlay */
+    z-index: 1; /* Ensure it appears above the background image but below the content */
+}
+/* Semi-transparent background for the menu and locations content */
+.menu-content {
+    position: relative;
+    z-index: 2;
+    display: block;
+    box-sizing: border-box; 
+    text-align: center;
+    
+}
+
+/* Specific styling for the "Our Menu" heading */
+.menu-content h3 {
+    font-size: 1.5rem;
+    color: #d69e3d; /* Yellow color for "Our Menu" */
+    text-transform: uppercase;
+    margin-bottom: 1rem;
+}
+
+/* Specific styling for the "Explore" heading */
+.menu-content h2 {
+    font-size: 2rem;
+    color: #fff;
+    text-transform: uppercase;
+    margin-bottom: 1.5rem;
+}
+
+/* Specific styling for the "Explore our menu" button */
+.explore-button {
+    background-color: #fff; /* White background */
+    color: #000; /* Black text */
+    border: 2px solid #fff;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+    font-size: 1rem;
+    text-transform: uppercase;
+    font-weight: bold;
+    width: auto;
+    display: inline-block;
+    margin-bottom: 20px;
+}
+
+/* Specific styling for the "View locations" button */
+.locations-button {
+    background-color: transparent;
+    color: #fff;
+    border: 2px solid #fff;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+    font-size: 1rem;
+    text-transform: uppercase;
+    font-weight: bold;
+    width: auto;
+    display: inline-block;
+}
+
+/* Hover state for buttons */
+.explore-button:hover, .locations-button:hover {
+    background-color: #d69e3d;
+    border-color: #d69e3d;
+    color: #fff;
+}
+
+
+/* About Us Section */
+#about-us {
+    padding: 2rem 1rem;
+    text-align: left;
+}
+
+#about-us h3 {
+    font-size: 2rem;
+    color: #333; /* Dark color for "Read Our Story" */
+    text-transform: uppercase;
+    margin-bottom: 1rem;
+}
+
+#about-us h2 {
+    font-size: 1.2rem;
+    color: #d69e3d; /* Yellow color for "About Us" */
+    text-transform: uppercase;
+    margin-bottom: 0.5rem;
+}
+
+#about-us p {
+    font-size: 1rem;
+    color: #333; /* Text color */
+    line-height: 1.5;
+    margin-bottom: 1rem;
+}
+
+#about-us button {
+    background-color: #000; /* Black background */
+    color: #fff; /* White text */
+    border: none;
+    padding: 0.8rem 2.5rem;
+    cursor: pointer;
+    font-size: 1rem;
+    text-transform: uppercase;
+    font-weight: bold;
+    width: auto;
+    
+}
+
+#about-us button:hover {
+    background-color: #860a0a; /* Slightly lighter black on hover */
+}
+
+ 
+
+
