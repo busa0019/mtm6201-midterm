@@ -973,7 +973,9 @@ nav .nav-links li a:focus {
     text-transform: uppercase;
     margin-bottom: 10px;
 }
-
+#offer .offer-item :nth-child(2){
+    margin-top: -10px;
+}
 #offer h2 {
     margin-bottom: 30px;
     font-size: 2rem;
@@ -995,9 +997,6 @@ nav .nav-links li a:focus {
 }
 
 
-
-
-/* Ensure the content is above the pseudo-element */
 
 
 /* Specific styling for the "Explore" heading */
