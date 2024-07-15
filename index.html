@@ -3,7 +3,6 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Faoziyyah Midterm Project</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@1/css/pico.min.css">
@@ -11,19 +10,24 @@
     <link rel="stylesheet" href="css/main.css">
 </head>
 <body>
-    <div class="wrapper">
+    
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+    <a href="#navigation" class="skip-link">Skip to navigation</a>
+    <div class="container" itemscope itemtype="https://schema.org/Organization">
         <header>
-            <nav class="container-fluid">
-                <div class="brand">
-                    <img src="images/logo.jpg" alt="Coffee House Logo" class="logo">
-                    <strong>My Coffee House</strong>
-                </div>
-                <ul class="nav-links">
-                    <li><a href="#about-us">About Us</a></li>
-                    <li><a href="#menu">Menu</a></li>
-                    <li><a href="#locations">Locations</a></li>
-                </ul>
-            </nav>
+            <div class="container header-container">
+                <nav id="navigation" class="main-nav" aria-label="Main Navigation">
+                    <div class="brand" itemscope itemtype="https://schema.org/Brand">
+                        <img src="images/logo.jpg" alt="Coffee House Logo" class="logo" itemprop="logo">
+                        <h1 itemprop="name">My Coffee House</h1>
+                    </div>
+                    <ul class="nav-links">
+                        <li><a href="#about-us">About Us</a></li>
+                        <li><a href="#menu">Menu</a></li>
+                        <li><a href="#locations">Locations</a></li>
+                    </ul>
+                </nav>
+            </div>
         </header>
         <main id="main-content" itemscope itemtype="https://schema.org/WebPage">
             <section id="hero" class="hero-wrapper" aria-labelledby="hero-heading">
@@ -112,41 +116,48 @@
                 </div>
             </section>
 
-            <section id="testimonials" class="content-section">
-                <h2>Testimonials</h2>
-                <h3>What Our Customers Say About Us</h3>
-                <div class="testimonial">
-                    <figure>
-                        <img src="images/testimonial-1.jpeg" alt="Customer 1 Image">
-                        <blockquote>
-                            <p>"I always make a point to visit My Coffee Company when in Ottawa. Delicious coffee and friendly service."</p>
-                            <footer>JANE D., TORONTO</footer>
-                        </blockquote>
-                    </figure>
-                </div>
-                <div class="testimonial">
-                    <figure>
-                        <img src="images/testimonial-2.jpeg" alt="Customer 2 Image">
-                        <blockquote>
-                            <p>"Great atmosphere to get some work done while enjoying a cup or two of incredible coffee."</p>
-                            <footer>SCOTT S., OTTAWA</footer>
-                        </blockquote>
-                    </figure>
-                </div>
-                <div class="testimonial">
-                    <figure>
-                        <img src="images/testimonial-3.jpeg" alt="Customer 3 Image">
-                        <blockquote>
-                            <p>"Best coffee in Ottawa and the service is top notch. Would highly recommend a visit."</p>
-                            <footer>SUSIE F., OTTAWA</footer>
-                        </blockquote>
-                    </figure>
-                </div>
-            </section>
-            <footer class="site-footer">
-                <hr>
-                <p>&copy; My Coffee Company 2024</p>
-            </footer>
-            
+            <div class="content-wrapper">
+                <section id="testimonials" class="content-section" aria-labelledby="testimonials-heading">
+                    <div class="container">
+                        <h2 id="testimonials-heading" class="section-title">Testimonials</h2>
+                        <h3 class="section-subtitle">What Our Customers Say About Us</h3>
+                        <div class="testimonial-grid">
+                            <div class="testimonial" style="background-image: url('images/testimonial-1.jpeg');">
+                                <div class="testimonial-content">
+                                    <blockquote>
+                                        <p>"I always make a point to visit My Coffee Company when in Ottawa. Delicious coffee and friendly service."</p>
+                                        <p class="testimonial-footer">JANE D., TORONTO</p>
+                                    </blockquote>
+                                </div>
+                            </div>
+                            <div class="testimonial" style="background-image: url('images/testimonial-2.jpeg');">
+                                <div class="testimonial-content">
+                                    <blockquote>
+                                        <p>"Great atmosphere to get some work done while enjoying a cup or two of incredible coffee."</p>
+                                        <p class="testimonial-footer">SCOTT S., OTTAWA</p>
+                                    </blockquote>
+                                </div>
+                            </div>
+                            <div class="testimonial" style="background-image: url('images/testimonial-3.jpeg');">
+                                <div class="testimonial-content">
+                                    <blockquote>
+                                        <p>"Best coffee in Ottawa and the service is top notch. Would highly recommend a visit."</p>
+                                        <p class="testimonial-footer">SUSIE F., OTTAWA</p>
+                                    </blockquote>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <footer class="site-footer">
+                    <span class="border-line"></span>
+                    <div class="container">
+                        <p>&copy; My Coffee Company 2024</p>
+                    </div>
+                </footer>
+            </div>
+        </main>
+    
+</div>
 </body>
 </html>
