@@ -74,6 +74,27 @@ body, h2, h3, p, blockquote {
     grid-template-columns: 1fr 1fr 1fr;
     gap: 1rem;
 }
+/* Global Button Styles */
+.button {
+    background-color: var(--white);
+    color: var(--black);
+    border: 2px solid var(--white);
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s, transform 0.3s ease-in-out;
+    font-size: 1rem;
+    text-transform: uppercase;
+    font-weight: bold;
+    display: inline-block;
+}
+
+.button:hover,
+.button:focus {
+    background-color: var(--golden-yellow);
+    border-color: var(--golden-yellow);
+    color: var(--white);
+    transform: scale(1.1);
+}
 
 /* Keyframes for animations */
 @keyframes pulse {
